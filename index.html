@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             text-align: center;
-            background-image: url('background.png'); /* твой фон PNG */
+            background-image: url('background.png'); /* фон PNG */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -45,15 +45,16 @@
         }
         .arrow {
             margin-top: 15px;
-            width: 40px; /* размер стрелки */
+            width: 70px; /* стрелка больше */
             height: auto;
         }
         .hint {
-            margin-top: 8px;
+            margin-top: 5px;
             font-size: 15px; /* средний размер */
             font-weight: bold;
             color: white;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.7); /* лёгкий объём */
+            line-height: 1.2; /* меньшее расстояние между строками */
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
         }
     </style>
 </head>
@@ -68,13 +69,15 @@
         </a>
     </div>
 
-    <!-- стрелка PNG -->
+    <!-- стрелка PNG с прозрачным фоном -->
     <img src="arrow.png" alt="Arrow" class="arrow">
 
     <!-- подсказка на трех языках -->
-    <div class="hint">Click on the restaurant</div>
-    <div class="hint">Нажмите на ресторан</div>
-    <div class="hint">Мейрамханаға басыңыз</div>
+    <div class="hint">
+        Click on the restaurant<br>
+        Нажмите на ресторан<br>
+        Мейрамханаға басыңыз
+    </div>
 
 </body>
 </html>
