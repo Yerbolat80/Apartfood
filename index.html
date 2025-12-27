@@ -3,21 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Apartfood</title>
+    <!-- Важный тег для мобильных устройств -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             background-color: #ffffff;
+            margin: 0;
+            padding: 0;
         }
         img {
             border-radius: 10px;
             margin-top: 20px;
+            max-width: 90%;   /* картинка занимает почти всю ширину экрана */
+            height: auto;     /* сохраняет пропорции */
         }
         h1 {
             margin-top: 40px;
         }
         p {
-            max-width: 600px;
+            max-width: 90%;   /* текст тоже адаптивный */
             margin: 20px auto;
             font-size: 18px;
             line-height: 1.5;
@@ -30,8 +36,8 @@
 
     <!-- Картинка MARIMO с ссылкой на меню -->
     <a href="https://marimo.kamiqr.com/menu/delivery2" target="_blank">
-  <img src="ApartFoto.webp" alt="MARIMO kafesi" style="width:400px; border-radius:10px;">
-</a>
+        <img src="ApartFoto.webp" alt="MARIMO kafesi">
+    </a>
 
     <!-- название рестика -->
     <h2>MARIMO кафеси</h2>
@@ -44,3 +50,4 @@
 
 </body>
 </html>
+
