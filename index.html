@@ -3,30 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <title>Apartfood</title>
-    <!-- Важный тег для мобильных устройств -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
             background-color: #ffffff;
             margin: 0;
             padding: 0;
         }
-        img {
+        .image-container {
+            position: relative;       /* контейнер для картинки и текста */
+            display: inline-block;
+            width: 90%;               /* адаптивная ширина */
+            margin: 10px;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
             border-radius: 10px;
-            margin-top: 20px;
-            max-width: 90%;   /* картинка занимает почти всю ширину экрана */
-            height: auto;     /* сохраняет пропорции */
+        }
+        .image-text {
+            position: absolute;
+            bottom: 10px;             /* текст снизу картинки */
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            background: rgba(0,0,0,0.5); /* полупрозрачный фон для читаемости */
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        /* Размещение картинки сбоку экрана сверху на телефоне */
+        @media (max-width: 768px) {
+            .image-container {
+                position: absolute;
+                top: 10px;
+                right: 10px;   /* картинка будет сверху справа */
+                width: 40%;    /* уменьшенная ширина для телефона */
+            }
         }
         h1 {
-            margin-top: 40px;
+            margin-top: 80px; /* чтобы заголовок не перекрывался картинкой */
+            text-align: center;
         }
         p {
-            max-width: 90%;   /* текст тоже адаптивный */
+            max-width: 90%;
             margin: 20px auto;
             font-size: 18px;
             line-height: 1.5;
+            text-align: center;
         }
     </style>
 </head>
@@ -34,15 +59,13 @@
 
     <h1>Наши рестораны</h1>
 
-    <!-- Картинка MARIMO с ссылкой на меню -->
-    <a href="https://marimo.kamiqr.com/menu/delivery2" target="_blank">
-        <img src="ApartFoto.webp" alt="MARIMO kafesi">
-    </a>
+    <div class="image-container">
+        <a href="https://marimo.kamiqr.com/menu/delivery2" target="_blank">
+            <img src="ApartFoto.webp" alt="MARIMO kafesi">
+            <div class="image-text">MARIMO кафеси</div>
+        </a>
+    </div>
 
-    <!-- название рестика -->
-    <h2>MARIMO кафеси</h2>
-
-    <!-- Краткое описание кухни -->
     <p>
         MARIMO кафеси — это паназиатская кухня. Здесь собраны простые и вкусные блюда Азии: 
         суши, лапша вок, пад тай и карри. Всё в одном месте для яркого вкуса и удобства.
@@ -50,4 +73,3 @@
 
 </body>
 </html>
-
