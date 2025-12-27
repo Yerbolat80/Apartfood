@@ -10,11 +10,12 @@
             background-color: #ffffff;
             margin: 0;
             padding: 0;
+            text-align: center;
         }
         .image-container {
-            position: relative;       /* контейнер для картинки и текста */
+            position: relative;
             display: inline-block;
-            width: 90%;               /* адаптивная ширина */
+            width: 90%;
             margin: 10px;
         }
         .image-container img {
@@ -24,34 +25,25 @@
         }
         .image-text {
             position: absolute;
-            bottom: 10px;             /* текст снизу картинки */
+            bottom: 10px;
             left: 50%;
             transform: translateX(-50%);
             color: white;
-            background: rgba(0,0,0,0.5); /* полупрозрачный фон для читаемости */
+            background: rgba(0,0,0,0.5);
             padding: 5px 10px;
             border-radius: 5px;
             font-size: 16px;
         }
-        /* Размещение картинки сбоку экрана сверху на телефоне */
         @media (max-width: 768px) {
             .image-container {
                 position: absolute;
                 top: 10px;
-                right: 10px;   /* картинка будет сверху справа */
-                width: 40%;    /* уменьшенная ширина для телефона */
+                right: 10px;
+                width: 40%;
             }
         }
         h1 {
-            margin-top: 80px; /* чтобы заголовок не перекрывался картинкой */
-            text-align: center;
-        }
-        p {
-            max-width: 90%;
-            margin: 20px auto;
-            font-size: 18px;
-            line-height: 1.5;
-            text-align: center;
+            margin-top: 80px;
         }
     </style>
 </head>
@@ -65,11 +57,6 @@
             <div class="image-text">MARIMO кафеси</div>
         </a>
     </div>
-
-    <p>
-        MARIMO кафеси — это паназиатская кухня. Здесь собраны простые и вкусные блюда Азии: 
-        суши, лапша вок, пад тай и карри. Всё в одном месте для яркого вкуса и удобства.
-    </p>
 
 </body>
 </html>
