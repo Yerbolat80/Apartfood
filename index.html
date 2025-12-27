@@ -10,16 +10,15 @@
             margin: 0;
             padding: 0;
             text-align: center;
-            /* Фон */
-            background-image: url('background.jpg'); /* твой файл JPG */
-            background-size: cover;       /* растягивает картинку на весь экран */
-            background-position: center;  /* центрирует */
-            background-repeat: no-repeat; /* убирает повтор */
-            min-height: 100vh;            /* фон занимает всю высоту экрана */
+            background-image: url('background.png'); /* твой фон PNG */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
         }
         h1 {
             margin-top: 40px;
-            color: white; /* чтобы текст был виден на фоне */
+            color: white;
             text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
         }
         .image-container {
@@ -44,15 +43,17 @@
             border-radius: 5px;
             font-size: 16px;
         }
-        @media (max-width: 768px) {
-            body {
-                background-size: cover;   /* фон подстраивается под экран телефона */
-                background-attachment: scroll; /* убираем фиксированность для мобильных */
-            }
-            .image-container {
-                width: 90%;
-                margin: 10px auto;
-            }
+        .arrow {
+            margin-top: 15px;
+            width: 40px; /* размер стрелки */
+            height: auto;
+        }
+        .hint {
+            margin-top: 8px;
+            font-size: 15px; /* средний размер */
+            font-weight: bold;
+            color: white;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.7); /* лёгкий объём */
         }
     </style>
 </head>
@@ -66,6 +67,14 @@
             <div class="image-text">MARIMO кафеси</div>
         </a>
     </div>
+
+    <!-- стрелка PNG -->
+    <img src="arrow.png" alt="Arrow" class="arrow">
+
+    <!-- подсказка на трех языках -->
+    <div class="hint">Click on the restaurant</div>
+    <div class="hint">Нажмите на ресторан</div>
+    <div class="hint">Мейрамханаға басыңыз</div>
 
 </body>
 </html>
